@@ -1,0 +1,27 @@
+[project]
+name = "wax-nft-sniper"
+version = "0.1.0"
+description = "Real-time WAX NFT sniper and whale monitor — track mints, floor prices, and big sales with Telegram alerts"
+authors = [{ name = "Yoshi Kondo", email = "yoshi@musicailab.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yksanjo/wax-nft-sniper"
+"Repository" = "https://github.com/yksanjo/wax-nft-sniper"
+
+[project.scripts]
+wax-sniper = "wax_nft_sniper.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["wax_nft_sniper*"]
